@@ -28,10 +28,10 @@ ActiveRecord::Schema.define(version: 2019_03_12_223811) do
     t.string "name"
     t.integer "runtime"
     t.string "thumbnail"
-    t.bigint "comedians_id"
+    t.bigint "comedian_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["comedians_id"], name: "index_specials_on_comedians_id"
+    t.index ["comedian_id"], name: "index_specials_on_comedian_id"
   end
 
 end
