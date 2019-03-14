@@ -1,8 +1,9 @@
 # require the model(s)
 Dir.glob(File.join('.', 'app', 'models', '*.rb')).each { |file| require file }
 
-Comedian.delete_all
-Special.delete_all
+Special.destroy_all
+Comedian.destroy_all
+# Special.destroy_all
 
 iliza = Comedian.create(name: "Iliza Shlesinger", age: 36, hometown: "Manhattan", profile_pic: "http://avalonuk.com/wp-content/uploads/2015/03/iliza-website.jpg")
 iliza.specials.create(name: "Confirmed Kills", runtime: 77, thumbnail: "https://m.media-amazon.com/images/M/MV5BZGEyYjkwMWItM2EyZS00N2Q1LWIzZmQtZDg5Y2ZmMzdlNTgyXkEyXkFqcGdeQXVyNjgzNzA2NjU@._V1_.jpg")
