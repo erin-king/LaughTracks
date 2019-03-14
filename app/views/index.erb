@@ -1,7 +1,14 @@
 <h1>Laugh Tracks</h1>
 
 <% @comedians.each do |comedian| %>
-  <div>
-    <%= comedian.name %>
+  <div id="comedian-<%=comedian.id%>">
+    Name: <%= comedian.name %>
+    Age: <%= comedian.age %>
+    Hometown: <%= comedian.hometown %>
+    <%comedian.specials.each do |special|%>
+      <div id="special-<%=special.id%>">
+        Special: <%=special.name%>
+        Runtime: <%=special.runtime%></div>
+    <%end%>
   </div>
 <% end %>
