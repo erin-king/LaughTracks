@@ -8,7 +8,8 @@
     <%comedian.specials.each do |special|%>
       <div id="special-<%=special.id%>">
         Special: <%=special.name%>
-        Runtime: <%=special.runtime%></div>
+        Runtime: <%=special.runtime%>
+        <img src="<%=special.thumbnail%>" width="50" height="100"></div>
     <%end%>
   </div>
 <% end %>
