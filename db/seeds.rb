@@ -1,5 +1,3 @@
-# require the model(s)
-# Dir.glob(File.join('.', 'app', 'models', '*.rb')).each { |file| require file }
 require './app/models/special.rb'
 require './app/models/comedian.rb'
 
