@@ -1,4 +1,4 @@
-RSpec.describe Comedian do
+RSpec.describe Comedian, type: :model do
   describe 'Validations' do
     describe 'Required Field(s)' do
       it 'should be invalid if missing a name' do
@@ -12,4 +12,16 @@ RSpec.describe Comedian do
       end
     end
   end
+
+  describe "Class Methods" do
+    describe ".average_age" do
+      it "returns average age for all comedians" do
+        Comedian.create(name: "Iliza Shlesinger", age: 26, hometown: "Manhattan", profile_pic: "http://avalonuk.com/wp-content/uploads/2015/03/iliza-website.jpg")
+        Comedian.create(name: "Erin King", age: 34, hometown: "Fountain", profile_pic: "http://avalonuk.com/wp-content/uploads/2015/03/iliza-website.jpg")
+
+        expect(Comedian.average_age).to eq(30)
+      end
+    end
+  end
+
 end

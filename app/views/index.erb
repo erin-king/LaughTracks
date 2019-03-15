@@ -1,5 +1,12 @@
 <h1>Laugh Tracks</h1>
 
+<header id="statistics">
+  <h2>Comedian Stats</h2>
+  <h3>Average Age: </h3>
+  <h3>Average Special Run Time: </h3>
+  <h3>Hometowns: </h3>
+</header>
+
 <% @comedians.each do |comedian| %>
   <div id="comedian-<%=comedian.id%>">
     Name: <%= comedian.name %>
