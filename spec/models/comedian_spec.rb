@@ -42,6 +42,6 @@ RSpec.describe Comedian, type: :model do
 
         expect(Comedian.average_specials_runtime).to eq(20)
       end
-    end
+    end  
   end
 end
