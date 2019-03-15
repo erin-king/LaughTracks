@@ -2,9 +2,11 @@
 
 <header id="statistics">
   <h2>Comedian Stats</h2>
-  <h3>Average Age: </h3>
-  <h3>Average Special Run Time: </h3>
-  <h3>Hometowns: </h3>
+  <div>
+    <h3>Average Age: <%= @comedians.average_age %></h3>
+    <h3>Average Special Run Time: <%= @comedians.average_specials_runtime %></h3>
+    <h3>Hometowns: <%= @comedians.unique_hometown_list.join(", ") %></h3>
+  </div>
 </header>
 
 <% @comedians.each do |comedian| %>

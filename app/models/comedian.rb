@@ -9,7 +9,11 @@ class Comedian < ActiveRecord::Base
   end
 
   def self.unique_hometown_list
-    distinct(:hometown)
+    distinct.pluck(:hometown)
+  end
+
+  def self.average_specials_runtime
+    joins(:specials).average(:runtime)
   end
 
 end
