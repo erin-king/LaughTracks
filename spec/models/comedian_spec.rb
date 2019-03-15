@@ -22,6 +22,12 @@ RSpec.describe Comedian, type: :model do
         expect(Comedian.average_age).to eq(30)
       end
     end
-  end
 
-end
+    describe ".unique_hometown_list"
+      it "returns a unique list of hometowns"
+        Comedian.create(name: "Iliza Shlesinger", age: 26, hometown: "Manhattan", profile_pic: "http://avalonuk.com/wp-content/uploads/2015/03/iliza-website.jpg")
+        Comedian.create(name: "Erin King", age: 34, hometown: "Fountain", profile_pic: "http://avalonuk.com/wp-content/uploads/2015/03/iliza-website.jpg")
+
+        expect(Comedian.unique_hometown_list.count).to eq(2)
+      end
+    end

@@ -8,6 +8,10 @@ class Comedian < ActiveRecord::Base
     average(:age)
   end
 
+  def self.unique_hometown_list
+    distinct(:hometown)
+  end
+
 end
 
 # # validates_presence_of :title
