@@ -16,11 +16,8 @@ class Comedian < ActiveRecord::Base
     joins(:specials).average(:runtime)
   end
 
-  def self.total_tv_specials
+  def self.total_specials
     joins(:specials).count
   end
 
 end
-
-# # validates_presence_of :title
-# # validates_presence_of :title, :length #allow for mutliple columns, use ","

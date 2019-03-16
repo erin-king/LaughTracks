@@ -6,6 +6,7 @@
     <h3>Average Age: <%= @comedians.average_age %></h3>
     <h3>Average Special Run Time: <%= @comedians.average_specials_runtime %></h3>
     <h3>Hometowns: <%= @comedians.unique_hometown_list.join(", ") %></h3>
+    <h3>Total Specials: <%= @comedians.total_specials %> </h3>
   </div>
 </header>
 
@@ -14,6 +15,7 @@
     Name: <%= comedian.name %>
     Age: <%= comedian.age %>
     Hometown: <%= comedian.hometown %>
+    Total Specials: <%= comedian.specials.count %>
     <%comedian.specials.each do |special|%>
       <div id="special-<%=special.id%>">
         Special: <%=special.name%>
