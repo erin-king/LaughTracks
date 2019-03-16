@@ -11,10 +11,6 @@ class LaughTracksApp < Sinatra::Base
 
 end
 
-# get '/tasks/new' do
-#   erb :new
-# end
-#
 # post '/tasks' do
 #   task = Task.new(params[:task])
 #   task.save
