@@ -18,7 +18,7 @@ RSpec.describe 'user visits new page' do
         click_button 'Submit'
       end
 
-      expect(current_path).to eq('/index')
+      expect(current_path).to eq('/comedians')
       expect(page).to have_content('Jazzy Jazzerton')
     end
 

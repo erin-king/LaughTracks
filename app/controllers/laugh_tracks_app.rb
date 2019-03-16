@@ -9,10 +9,11 @@ class LaughTracksApp < Sinatra::Base
     erb :new
   end
 
-end
+  post '/comedians' do
+    Comedian.create(name: params[:comedian][:name],
+                    age: params[:comedian][:age],
+                    hometown: params[:comedian][:hometown])
+    redirect '/comedians'
+  end
 
-# post '/tasks' do
-#   task = Task.new(params[:task])
-#   task.save
-#   redirect '/tasks'
-# end
+end
