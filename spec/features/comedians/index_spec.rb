@@ -78,5 +78,33 @@ RSpec.describe 'user visits homepage' do
       end
       expect(page).to_not have_content("Name: #{comedian_1.name}")
     end
+
+    it 'should show a form' do
+      visit '/comedians/new'
+
+      # click_button 'Create My Account'
+      # fill_in 'Title', with: 'I love Rails!'
+      expect(page).to have_css("form")
+
+      within "#new-comedian-form" do
+        expect(page).to have_content("Name")
+        expect(page).to have_content("Age")
+        expect(page).to have_content("Hometown")
+        expect(page).to have_css("button")
+      end
+    end
   end
 end
+
+# Then I see a form to input a new comedian into the database
+# Including fields for their name, age and city.
+# When the form is successfully submitted and saved,
+# Then I am redirected to `/comedians`
+# And I see the new comedian's data on the page.
+
+# <form action="/tasks" method="post">
+#   <p>Enter a new task:</p>
+#   <input type='text' name='task[title]'/><br/>
+#   <textarea name='task[description]'></textarea><br/>
+#   <input type='submit'/>
+# </form>
