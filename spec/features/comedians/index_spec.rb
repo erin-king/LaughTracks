@@ -10,12 +10,14 @@ RSpec.describe 'user visits homepage' do
         expect(page).to have_content("Name: #{comedian_1.name}")
         expect(page).to have_content("Age: #{comedian_1.age}")
         expect(page).to have_content("Hometown: #{comedian_1.hometown}")
+        # expect(page).to have_content("Total TV Specials: #{comdian_1.total_tv_specials}")
       end
 
       within "#comedian-#{comedian_2.id}" do
         expect(page).to have_content("Name: #{comedian_2.name}")
         expect(page).to have_content("Age: #{comedian_2.age}")
         expect(page).to have_content("Hometown: #{comedian_2.hometown}")
+        # expect(page).to have_content("Total TV Specials: #{comdian_2.total_tv_specials}")
       end
     end
 
@@ -27,6 +29,7 @@ RSpec.describe 'user visits homepage' do
       visit '/comedians'
 
       within "#comedian-#{comedian_2.id}" do
+
         within "#special-#{special_1.id}" do
           expect(page).to have_content("Special: #{special_1.name}")
           expect(page).to have_content("Runtime: #{special_1.runtime}")
@@ -69,7 +72,6 @@ RSpec.describe 'user visits homepage' do
       visit '/comedians?age=34'
 
       within "#comedian-#{comedian_2.id}" do
-        save_and_open_page
         expect(page).to have_content("Name: #{comedian_2.name}")
         expect(page).to have_content("Age: #{comedian_2.age}")
         expect(page).to have_content("Hometown: #{comedian_2.hometown}")
