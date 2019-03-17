@@ -1,26 +1,34 @@
-<h1>Laugh Tracks</h1>
-
-<header id="statistics">
-  <h2>Comedian Stats</h2>
+<section id="statistics">
+  <h2>Comedian Stats:</h2>
   <div>
-    <h3>Average Age: <%= @comedians.average_age %></h3>
-    <h3>Average Special Run Time: <%= @comedians.average_specials_runtime %></h3>
+    <h3>Average Age: <%= @comedians.average_age.to_f.round(2) %></h3>
+    <h3>Average Special Run Time: <%= @comedians.average_specials_runtime.to_f.round(2) %></h3>
     <h3>Hometowns: <%= @comedians.unique_hometown_list.join(", ") %></h3>
     <h3>Total Specials: <%= @comedians.total_specials %> </h3>
   </div>
-</header>
+</section>
 
 <% @comedians.each do |comedian| %>
-  <div id="comedian-<%=comedian.id%>">
-    Name: <%= comedian.name %>
-    Age: <%= comedian.age %>
-    Hometown: <%= comedian.hometown %>
-    Total Specials: <%= comedian.specials.count %>
+  <div class="comedian-frame" id="comedian-<%=comedian.id%>">
+    <div class="profile-pic">
+      <img src="<%=comedian.profile_pic%>">
+    </div>
+    <div class="indy-stats" >
+      Name: <%= comedian.name %></br>
+      Age: <%= comedian.age %></br>
+      Hometown: <%= comedian.hometown %></br>
+      Total Specials: <%= comedian.specials.count %>
+    </div>
     <%comedian.specials.each do |special|%>
-      <div id="special-<%=special.id%>">
-        Special: <%=special.name%>
+    <div class="special-stats" id="special-<%=special.id%>">
+      <div>
+        <img src="<%=special.thumbnail%>" width="150" height="200">
+      </div>
+      <div class="special-info">
+        Special: <%=special.name%> </br>
         Runtime: <%=special.runtime%>
-        <img src="<%=special.thumbnail%>" width="50" height="100"></div>
+      </div>
+    </div>
     <%end%>
   </div>
 <% end %>

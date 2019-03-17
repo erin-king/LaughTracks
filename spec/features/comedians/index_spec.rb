@@ -29,13 +29,11 @@ RSpec.describe 'user visits homepage' do
       visit '/comedians'
 
       within "#comedian-#{comedian_2.id}" do
-
         within "#special-#{special_1.id}" do
           expect(page).to have_content("Special: #{special_1.name}")
           expect(page).to have_content("Runtime: #{special_1.runtime}")
           expect(page).to have_css("img")
         end
-
         within "#special-#{special_2.id}" do
           expect(page).to have_content("Special: #{special_2.name}")
           expect(page).to have_content("Runtime: #{special_2.runtime}")
