@@ -1,0 +1,45 @@
+body {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+header {
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 15px;
+  border-color: #FF3A20;
+  padding-left: 50px;
+  text-align: left;
+  background: #74A4BC;
+  color: #29339B;
+  font-size: 30px;
+}
+
+#statistics {
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 15px;
+  border-color: #B6D6CC;
+  padding-left: 50px;
+  text-align: left;
+  background: #F1FEC6;
+  color: #29339B;
+  font-size: 15px;
+}
+
+#statistics h2 {
+  font-size: 20px;
+  color: #29339B;
+  font-weight: bold;
+}
+
+#comedian-frame {
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 15px;
+  border-color: #B6D6CC;
+  padding-left: 50px;
+  text-align: left;
+  background: #F1FEC6;
+  color: #29339B;
+  font-size: 15px;
+}
