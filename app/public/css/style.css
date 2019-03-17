@@ -32,14 +32,48 @@ header {
   font-weight: bold;
 }
 
-#comedian-frame {
+h3 div {
+  display: inline;
+  font-weight: normal;
+}
+
+.comedian-frame {
+  display: flex;
   border-style: solid;
   border-radius: 5px;
   border-width: 15px;
-  border-color: #B6D6CC;
+  border-color: #FF3A20;
   padding-left: 50px;
   text-align: left;
   background: #F1FEC6;
   color: #29339B;
   font-size: 15px;
+}
+
+.profile-pic {
+  padding-top: 55px;
+}
+
+.profile-pic img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+.indy-stats {
+  padding-top: 55px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.special-stats {
+  padding-top: 15px;
+  padding-right: 15px;
+  width: 200px;
+}
+
+.special-info {
+  padding-top: 10px;
+  padding-left: 10px;
+  max-width: 200px;
 }
