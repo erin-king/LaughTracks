@@ -1,10 +1,10 @@
 <section id="statistics">
   <h2>Comedian Stats:</h2>
   <div>
-    <h3>Average Age: <div><%= @comedians.average_age.to_f.round(2) %></div></h3>
-    <h3>Average Special Run Time: <div><%= @comedians.average_specials_runtime.to_f.round(2) %></div></h3>
-    <h3>Hometowns: <div><%= @comedians.unique_hometown_list.join(", ") %></div></h3>
-    <h3>Total Specials: <div><%= @comedians.total_specials %> </div></h3>
+    <h3>Average Age: <%= @comedians.average_age.to_f.round(2) %></h3>
+    <h3>Average Special Run Time: <%= @comedians.average_specials_runtime.to_f.round(2) %></h3>
+    <h3>Hometowns: <%= @comedians.unique_hometown_list.join(", ") %></h3>
+    <h3>Total Specials: <%= @comedians.total_specials %> </h3>
   </div>
 </section>
 
@@ -20,8 +20,8 @@
       Total Specials: <%= comedian.specials.count %>
     </div>
     <%comedian.specials.each do |special|%>
-    <div class="special-stats">
-      <div id="special-<%=special.id%>">
+    <div class="special-stats" id="special-<%=special.id%>">
+      <div>
         <img src="<%=special.thumbnail%>" width="150" height="200">
       </div>
       <div class="special-info">
